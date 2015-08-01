@@ -46,7 +46,7 @@ rails開発でよく使うrakeコマンド
 ```
 rake routes
 rake spec
-rake db:migrage # mongodbだと不要
+rake db:migrate # mongodbだと不要
 ```
 
 ### bundlerでgemパッケージを束ねる
@@ -182,7 +182,7 @@ http://localhost:3000/rails/info/routes
 1. update(PUT/PATCH)
 1. destroy(DELETE)
 
-app/controller/tasks_controller.rbを見る。
+app/controllers/tasks_controller.rbを見る。
 
 ポイントは2つ
 
