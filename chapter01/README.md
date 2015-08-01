@@ -1,4 +1,4 @@
-# 1章 Ruby on Rails の概要
+# 1章 Ruby on Railsの概要
 
 担当: @syokenz
 
