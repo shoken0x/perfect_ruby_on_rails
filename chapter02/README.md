@@ -72,9 +72,9 @@ scope :costly, -> { where("price > ?", 3000)}
 
 ### モデル同士のリレーション
 
-1対多 = has_manyとbelongs_to
-1対1 = has_one
-多対多 = has_many, through: 中間テーブル
+1対多 = has_manyとbelongs_to  
+1対1 = has_one  
+多対多 = has_many, through: 中間テーブル  
 
 
 ### バリデーション
@@ -92,7 +92,7 @@ scope :costly, -> { where("price > ?", 3000)}
 `:if`でコールバックの条件を設定できる。
 
 ```ruby
-def high_price
+def high_price?
   price >= 5000
 end
 
@@ -314,7 +314,7 @@ ERB, Haml, Slimの紹介。省略。
 
 ### エスケープ処理
 
-`raw`ヘルパー、もしくは`Stiring#html_safe`メソッドでエスケープする。
+`raw`ヘルパー、もしくは`Stiring#html_safe`メソッドを呼ぶとエスケープが解除される。
 
 ### APIサーバにとってのビューについて
 

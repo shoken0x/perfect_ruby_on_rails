@@ -46,7 +46,7 @@ rails開発でよく使うrakeコマンド
 ```
 rake routes
 rake spec
-rake db:migrage # mongodbだと不要
+rake db:migrate # mongodbだと不要
 ```
 
 ### bundlerでgemパッケージを束ねる
@@ -70,7 +70,7 @@ http://xxxcaqui.hatenablog.com/entry/2013/02/11/013421
 ```
 gem "rails", "3.0.0.beta3" # 3.0.0.beta3で固定
 gem "rack",  ">=1.0"       # 1.0以降のバージョンに制限
-gem "thin",  "~>1.1"       # 1.1以降2.0以前のバージョンに制限
+gem "thin",  "~>1.1"       # 1.1以降2.0以前のバージョンに制限。~>1.1.0とすると1.1.0以上1.2.0未満の最新のものを使用
 gem 'rails', :git => 'git://github.com/rails/rails.git' # 最新のRailsを使用, branch指定もできる
 ```
 
@@ -182,7 +182,7 @@ http://localhost:3000/rails/info/routes
 1. update(PUT/PATCH)
 1. destroy(DELETE)
 
-app/controller/tasks_controller.rbを見る。
+app/controllers/tasks_controller.rbを見る。
 
 ポイントは2つ
 
