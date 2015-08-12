@@ -31,11 +31,8 @@ pryから様々な情報を見れる。
 ![Hirb on pry](http://hiroki-tkg.com/wp-content/uploads/pry.png)
 
 
-◆ブレークポイント
-binding.pryと入力しておくと、この行が実行された時にプログラムが中断される
-
-デバッグをより便利に
-byebug
+※ブレークポイント※
+ファイル内に、`binding.pry`と入力しておくと、この行が実行された時にプログラムが中断される。
 
 pry-byebugをインストールするとステップ実行のnextやstep等が利用できる
 
