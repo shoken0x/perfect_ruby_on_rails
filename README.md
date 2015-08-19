@@ -11,7 +11,7 @@ http://www.amazon.co.jp/dp/4774165166
 - [3章 アセット](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter03) 2015/08/12 @syokenz
 - [4章 Railsのロードパスとレイヤーの定義方法](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter04) 2015/08/19 @hiroki-tkg
 - [5章 開発を効率化するgem](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter05) 2015/08/19 @hiroki-tkg
-- [6章 Railsアプリケーションの開発](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter06)
+- [6章 Railsアプリケーションの開発](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter06) 2015/08/26 @syokenz
 - [7章 Railsアプリケーションのテスト](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter07)
 - [8章 Railsのインフラと運用](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter08)
 - [9章 より実践的なモデルの使い方](https://github.com/syokenz/perfect_ruby_on_rails/tree/master/chapter09)
