@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+  has_many :tickets, dependent: :destroy
   belongs_to :owner, class_name: 'User'
 
   validates :name, length: { maximum: 50 }, presence: true
@@ -8,6 +9,11 @@ class Event < ActiveRecord::Base
   validates :end_time, presence: true
 
   validate :start_time_should_be_before_end_time
+
+  def created_by?(user)
+    return false unless user
+    owner_id == user.id
+  end
 
   private
   def start_time_should_be_before_end_time

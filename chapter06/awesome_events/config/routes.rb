@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
-  resources :events
+  root 'welcome#index'
+
+  resources :events, except: :index do
+    resources :tickets, only: [:new, :create, :destroy]
+  end
+
+  resource :user, only: :destroy do
+    get 'retire'
+  end
 
   get 'welcome/index'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
   get '/auth/:provier/callback' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: :logout
+
+  match '*path' => 'application#error404', via: :all
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
