@@ -115,7 +115,7 @@ production環境ではプリコンパイルを実施する。事前にプリコ�
 
 `rake assets:precompile`
 
-- fingerprint（ダイジェスト）をファイル名に追加したアセットファイルを、`public/assets`以下に配置
+- fingerprint（ダイジェスト）をファイル名に追加したアセットファイルを、`public/assets`以下に配置(p.129のcolumn参考)
 - JavaScript,cssのminifyを実行
 - ディレクティブに従ってconcatenateを実行
 
