@@ -103,9 +103,9 @@ describe Event do
 end
 ```
 
-describeの引数 => オブジェクト、メソッド名
-contextの引数  => 条件
-itの引数       => 何を期待しているかを文字列で
+describeの引数 => オブジェクト、メソッド名  
+contextの引数  => 条件  
+itの引数       => 何を期待しているかを文字列で  
 
 実際の処理は、ブロック中に記述
 
@@ -131,6 +131,7 @@ end
 ```
 
 ### fixture replacement
+テストコードで内で、Event.createなどのメソッドを利用すればレコードを作成できるが、標準でfixtureと呼ばれる機能を用意しており、yamlファイルにテスト用のデータ内容を記述し利用できる。
 
 今回はよく利用される factory_girl を使ってみる
 
