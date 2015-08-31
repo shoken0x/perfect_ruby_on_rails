@@ -311,7 +311,17 @@ Jenkins
 Travis CI  
 [https://travis-ci.org/](https://travis-ci.org/)
 
-#7-11 カバレッジと静的解析
+Wercker
+[http://wercker.com](http://wercker.com)
+
+Travis DI
+[https://travis-ci.org](https://travis-ci.org)
+
+Circle CI
+[https://circleci.com](https://circleci.com)
+
+
+## 7-11 カバレッジと静的解析
 
 ####カバレッジ  
 テストを実行した時に、アプリケーションのコード全体のうち、テストできたコードの割合がどの位かという意味。
