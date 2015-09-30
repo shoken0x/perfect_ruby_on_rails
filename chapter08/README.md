@@ -335,3 +335,6 @@ ESX, Xen, KVM, bhyve, xhyve そして、LXCからCoreOSとDockerへ
 - [Docker と LXC - Qiita](http://qiita.com/Surgo/items/709a07d68c6eafbad267)
 - [Docker 誕生から現在までの過程を俯瞰する 1 (2013/3～2014/10) - Qiita](http://qiita.com/Arturias/items/c12441c87f4de3102ea7)
 
+### クラウドDevOpsの旗手会社 Hashicorp
+
+https://hashicorp.com
