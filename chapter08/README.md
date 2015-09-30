@@ -162,16 +162,24 @@ vagrant provision
 
 vagrant sshで接続して、gitのバージョンを確認する
 
+cookbooksの内容を確認する
+
 ## 8-3. Chefを用いた本格的なサーバ構成管理 p.284
 
 ### Chefの基本的な概念について
 
 - ノード
+  - Chefのクライアントを実行するホスト
 - ノード属性(Attribute)
+  - 各ノードの独自の設定の値を指定するために利用。ミドルウェアのパスワードなど
 - ロール
+  - Webサーバ、APサーバ、DBサーバなどの役割
 - クックブック
+  - プロビジョニングの内容
 - レシピ
+  - クックブックを構成する要素。クックブックはいくつかのレシピで構成される。
 - リソース
+  - あるホストに対しての設定内容を抽象化したもの。ファイルを操作するためにfileリソースやパッケージをインストールするためのpackageリソースなど。
 
 ### クックブックのひな形を作る
 
@@ -207,6 +215,8 @@ cookbook 'imagemagick'
 
 Vagrantfileへ追記
 
+注意: rubyのインストールで失敗します
+
 ```
 config.vm.provision :chef_solo do |chef|
   chef.cookbooks_path = ["./cookbooks", "./site-cookbooks"]
@@ -214,7 +224,7 @@ config.vm.provision :chef_solo do |chef|
   chef.add_recipe 'git'
   chef.add_recipe 'memcached'
   chef.add_recipe 'nodejs'
-  chef.add_recipe 'database'
+#  chef.add_recipe 'database'
   chef.add_recipe 'xml'
   chef.add_recipe 'ruby_build'
   chef.add_recipe 'rbenv::system'
@@ -248,6 +258,11 @@ vagrant provision
 
 ### カスタムレシピを作る
 
+できること
+
+- 独自ユーザーの作成
+- 秘密鍵、公開鍵の配置
+- Nginxなどの設定ファイルの動的設定と配置
 
 ## 8-4. デプロイをする p.302
 
