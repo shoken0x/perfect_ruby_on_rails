@@ -1,0 +1,42 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "opscode-ubuntu-12.04"
+
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # VMが立ち上がらないerrorを避ける為
+  # https://github.com/mitchellh/vagrant/issues/2157
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
+  end
+
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = ["./cookbooks", "./site-cookbooks"]
+    chef.add_recipe 'build-essential'
+    chef.add_recipe 'git'
+    chef.add_recipe 'memcached'
+    chef.add_recipe 'nodejs'
+#    chef.add_recipe 'database'
+    chef.add_recipe 'xml'
+    chef.add_recipe 'ruby_build'
+    chef.add_recipe 'rbenv::system'
+    chef.add_recipe 'nginx'
+    chef.add_recipe 'imagemagick'
+  
+    chef.json = {
+      "rbenv" => {
+        "global" => "2.1.2",
+        "rubies" => [ "2.1.2" ],
+        "gems" => {
+          "2.1.2" => [
+            { 'name' => 'bundler' }
+          ]
+        }
+      }
+    }
+  end
+end
