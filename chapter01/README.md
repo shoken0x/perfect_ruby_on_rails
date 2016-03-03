@@ -63,14 +63,14 @@ bundle exec
 bundle init  #ひな形Gemfileを作成
 ```
 
-Gemfileでよく使う書き方
+Gemfileでよく使う書き方、バージョンについて
 
 http://xxxcaqui.hatenablog.com/entry/2013/02/11/013421
 
 ```
 gem "rails", "3.0.0.beta3" # 3.0.0.beta3で固定
 gem "rack",  ">=1.0"       # 1.0以降のバージョンに制限
-gem "thin",  "~>1.1"       # 1.1以降2.0以前のバージョンに制限。~>1.1.0とすると1.1.0以上1.2.0未満の最新のものを使用
+gem "thin",  "~>1.1"       # 1.1以降2.0未満のバージョンに制限。~>1.1.0とすると1.1.0以上1.2.0未満の最新のものを使用
 gem 'rails', :git => 'git://github.com/rails/rails.git' # 最新のRailsを使用, branch指定もできる
 ```
 
