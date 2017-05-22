@@ -24,7 +24,7 @@ https://rubygems.org
 よく使うGemコマンド
 
 ```
-gem seach {gemパッケージ名}
+gem search {gemパッケージ名}
 gem install {gemパッケージ名} # gem i でも可
 gem uninstall {gemパッケージ名}
 ```
