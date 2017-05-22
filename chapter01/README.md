@@ -119,7 +119,7 @@ gem install rails -v 4.1.1 --no-ri --no-rdoc
 ### プロジェクトのひな形を作成する
 
 ```
-rails new todo
+rails _4.1.1_ new todo # 本書でのバージョンが 4.1.1 なので合わせる
 ```
 
 ディレクトリ構成をテキストを見ながら確認する。
