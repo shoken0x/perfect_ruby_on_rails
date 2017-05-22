@@ -63,6 +63,10 @@ bundle exec
 bundle init  #ひな形Gemfileを作成
 ```
 
+#### 理解のポイント
+
+`bundle install` と `bundle update` の違い
+
 Gemfileでよく使う書き方、バージョンについて
 
 http://xxxcaqui.hatenablog.com/entry/2013/02/11/013421
