@@ -45,7 +45,7 @@ rails開発でよく使うrakeコマンド
 
 ```
 rake routes
-rake spec
+rake spec # または bundle exec rspec #{ファイル名}
 rake db:migrate # mongodbだと不要
 ```
 
