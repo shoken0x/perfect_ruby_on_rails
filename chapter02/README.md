@@ -23,7 +23,7 @@
 ![mvc_framework.jpg](https://qiita-image-store.s3.amazonaws.com/0/32750/1c81c4df-0548-70ce-3675-01b719eb34c5.jpeg "mvc_framework.jpg")
 
 ```
-rails new book_admin
+rails _4.1.1_ new book_admin
 ```
 
 ## モデルの役割
