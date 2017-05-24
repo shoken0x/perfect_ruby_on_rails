@@ -57,7 +57,7 @@ create, save, find, all, delete, destroyなど
 1. findやfind_byではなく、whereで複数のレコードが返ってくる時、返り値はActiveRecord::Relationインスタンスとなる。
 2. ActiveRecordに対してQuery Interface(whereなど)が呼ばれると、ActiveRecord::Relationインスタンスが生成される。
 3. Query Interfaceは繰り返し呼び出すことができ、ActiveRecord::Relationインスタンスに情報が蓄積し、どんなSQLを発行するかの情報が更新されていく。
-4. 実際にデータが必要になった時点でSQLを発行紙、データを取得する。
+4. 実際にデータが必要になった時点でSQLを発行し、データを取得する。
 
 
 ### scope
