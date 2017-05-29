@@ -6,7 +6,7 @@
 
 - Sprockets: アセットファイルを管理する仕組みAsset Pipelineの基盤パッケージ https://github.com/rails/sprockets
 - CoffeeScript, Sass: 資料では省略。自習しましょう。
-- Turbolinks: Pjaxを利用したページ遷移を提供する。Rails5でもTurbolinks3として入っている機能。
+- Turbolinks: Pjaxを利用したページ遷移を提供する。Rails5でもTurbolinks5として入っている機能。
 
 
 ## Sprockets p.94
