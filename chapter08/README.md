@@ -21,6 +21,28 @@ Development EngineerとOperations Engineerが歩み寄る
 
 ## 8-2. VagrantでローカルにVMを作る p.277
 
+### CPUの仮想化支援の確認
+
+#### Linux
+
+```
+cat /proc/cupinfo
+```
+
+#### Mac
+
+```
+system_profiler SPHardwareDataType
+```
+
+```
+sysctl -a | grep machdep.cpu.features
+```
+
+If you see VMX entry then CPU supports Intel VT-x feature, but it still may be disabled.
+
+[osx - How to enable support of CPU virtualization on Macbook Pro? - Stack Overflow](https://stackoverflow.com/questions/13580491/how-to-enable-support-of-cpu-virtualization-on-macbook-pro)
+
 ### VagrantとVirtualBoxのインストール
 
 公式サイトからダウンロードしてインストール
