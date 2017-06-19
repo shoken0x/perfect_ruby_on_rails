@@ -360,6 +360,70 @@ ESX, Xen, KVM, bhyve, xhyve そして、LXCからCoreOSとDockerへ
 - [Docker 入門](http://docker.yuichi.com/index.html)
 - [Docker Machine リファレンス](http://qiita.com/spesnova/items/073dd64a8a1d580d9ae9)
 
+```
+https://www.docker.com/toolbox
+からdockerをダウンロードしてインストールする。
+Virtualboxが入ってなかったら、インストール。
+
+docker -v
+docker-machine -v
+docker-compose  -v
+
+docker clientはdocker daemonにAPIリクエスト(HTTP)を投げている
+
+dockerレジストリにimageが登録されている
+
+# Docker ホストを作成
+$ docker-machine create --driver virtualbox dev
+$ docker-machine env dev
+
+$ docker-machine ls      # devというmachineが見える
+$ docker-machine env dev # 環境変数を確認
+
+# VirtualboxにVMが作成される。Virtualboxを起動すると確認できる。
+# OS(Linux ディストリビューション)はboot2docker(tinylinux)
+
+$ eval "$(docker-machine env dev)" #devに設定する
+* Are you trying to connect to a TLS-enabled daemon without TLS?
+* Is your docker daemon up and running?
+というエラーが出た時には上のコマンドを確認する。
+
+$ docker info            #devの情報が確認できる
+
+# Docker イメージをダウンロード
+$ docker images
+$ docker pull spesnova/hello-world
+
+# Docker コンテナを起動
+$ docker run \
+-d \                     # デーモン起動
+-p 80:4567 \             # コンテナとひも付けるポート指定
+--name hello \
+spesnova/hello-world \
+bundle exec ruby app.rb
+
+# 確認
+$ docker ps  # -aオプションで停止しているコンテナも表示
+
+# log確認
+$ docker logs -f hello
+
+# 停止、削除
+$ docker stop hello
+$ docker rm hello
+
+# ビルドする
+$ docker build -t=hello .
+$ docker images   # helloが増えていたら成功
+
+# コンテナを起動する
+$ docker run \
+-p 80:4567 \
+--name hello \
+hello \
+bundle exec ruby app.rb
+```
+
 
 ### クラウドDevOpsの旗手会社 Hashicorp
 
