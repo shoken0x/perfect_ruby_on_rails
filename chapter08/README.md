@@ -328,6 +328,7 @@ Capistranoを使った自動デプロイ
 
 - Airbrake: エラー通知と解析に特化したSaaS
 - Fluentd/kibana: ログ収集とビジュアライズ
+- Re:dash
 
 
 ## 8-6. serverspecとインフラのテスト p.329
@@ -436,3 +437,7 @@ bundle exec ruby app.rb
 ### クラウドDevOpsの旗手会社 Hashicorp
 
 https://hashicorp.com
+
+### Google製DockerクラスタツールKubernetes
+
+[Kubernetes | Production-Grade Container Orchestration](https://kubernetes.io/)
