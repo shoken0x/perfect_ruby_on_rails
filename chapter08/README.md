@@ -79,8 +79,6 @@ vagrant init .
 Vagrantfileのconfig.vm.boxを修正する
 
 ```
-config.vm.box = "rails"
-もしくは
 config.vm.box = "opscode-ubuntu-12.04"
 ```
 
