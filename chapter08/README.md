@@ -329,6 +329,7 @@ Capistranoを使った自動デプロイ
 - Airbrake: エラー通知と解析に特化したSaaS
 - Fluentd/kibana: ログ収集とビジュアライズ
 - Re:dash
+- Airbnb製 Superset [airbnb/superset: Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application](https://github.com/airbnb/superset)
 
 
 ## 8-6. serverspecとインフラのテスト p.329
