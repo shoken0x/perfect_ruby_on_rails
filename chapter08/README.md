@@ -125,6 +125,14 @@ VMのリロード
 vagrant reload
 ```
 
+VMのストップ
+
+```
+vagrant halt
+```
+
+[Vagrant インストールから、仮想マシンの起動〜停止まで](http://qiita.com/kasei-san/items/60fdda1e75e5d5b69be6)
+
 ### Chefを動かしてみる
 
 Gemfileの作成
