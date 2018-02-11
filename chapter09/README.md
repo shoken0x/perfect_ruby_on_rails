@@ -116,13 +116,13 @@ RailsはオブジェクトとRDBのデータをマッピングするため**ア�
 - 1つのクラスの中で広範囲の処理ができること。バリデーションやコールバックを宣言的に記述する仕組みのため、データの整合性に対する責任も含むことになり多機能化していく。
 
 
-フォース: 
+フォース:
 
 - RDBに依存しないモデルクラスを作成する
 - 1つの物事についてのみ責任を持つ小さなクラスを作成する
 
-具体的な実装: 
-  
+具体的な実装:
+
 - バリデーションとコールバック機能を小さなクラスに分離する
 - ActiveModelを直接利用してRDBに依存しないモデルクラスを定義する
 - システム機能の一部をActiveRecordモデルの外に抽出するためのテクニック　
@@ -189,7 +189,7 @@ ActiveModel::EachValidatorを継承したクラスを定義すると、`validate
 
 ### どういった場合にクラスを分離するか
 
-別クラスに分離する場合のデメリット: 
+別クラスに分離する場合のデメリット:
 
 - コード量が増加する
 - 実装が分散することで、モデルクラスの動作を把握する手間が増大する
@@ -224,7 +224,7 @@ ActiveRecordの主な機能
 
 - バリデーション
 - コールバック
-- 属姓名を元にした動的なメソッドを定義
+- 属性名を元にした動的なメソッドを定義
 - 属性値に対する変更を保持する
 - オブジェクトのシリアライズ
 
@@ -239,7 +239,7 @@ ActiveModelが提供する機能
 - ActiveModel::Serialization
 - ActiveModel::Validations
 
-Rails4からActiveModel::Modelをincludeできるようになった。 
+Rails4からActiveModel::Modelをincludeできるようになった。
 ActiveModel::Modelを利用して定義したクラスは、フォームヘルパーに渡せる。なので、
 
 - DBに依存（保存）しない入力フォームの構築
@@ -277,7 +277,7 @@ class User < ActiveRecord::Base
  def same_prefecture?(other)
   prefecture == other.prefecture
  end
- 
+
  def same_city?(other)
   city == other.city
  end
@@ -291,7 +291,7 @@ class User < ActiveRecord::Base
  def address
    @address ||= Address.new(prefecture, city, house_number)
  end
- 
+
  def address=(address)
   self.prefecture   = address.prefecture
   self.city         = address.city
@@ -306,31 +306,31 @@ end
 ```
 class Address
  attr_accessor :prefecture, :city, :house_number
- 
+
  def initialize(prefecture = nil, city = nil, house_number = nil)
   @prefecture   = prefecture
   @city         = city
   @house_number = house_number
  end
- 
+
  def hash
   prefecture.hash + city.hash + house_number.hash
  end
- 
+
  def ==(other)
   return false unless other.is_a?(Address)
-  
+
   same_prefecture?(other) && same_city?(other) && same_house_number?(other)
  end
- 
+
  def same_prefecture?(other)
    prefecture == other.prefecture
  end
- 
+
  def same_city?(other)
   city == other.city
  end
- 
+
  def same_house_number?(other)
   house_number == other.house_number
  end
@@ -346,7 +346,7 @@ end
 
 ```
 class User < ActiveRecord::base
-  comosed_of :addrss, mapping: [%w(prefecture prefecture), %w(city city), %w(house_number house_number)]
+  composed_of :address, mapping: [%w(prefecture prefecture), %w(city city), %w(house_number house_number)]
 end
 ```
 
@@ -388,7 +388,7 @@ includeされたときの処理を分かりやすく記述
 サービスクラスに抽出する処理とは
 
 - 非常に複雑な処理
-- 特定のテンティティや値オブジェクトに所属させると不自然になってしまう処理
+- 特定のエンティティや値オブジェクトに所属させると不自然になってしまう処理
 
 目的: **モデルが過剰に複雑になることを防ぐこと**
 
@@ -450,5 +450,5 @@ includeされたときの処理を分かりやすく記述
 
 備考: STIを使ったモデルが3つ(親1つ、子2つ)あった場合、テーブルは1つになりtypeカラムで区別する
 
-参考: 
+参考:
 [【Rails】ActiveRecord：単一テーブル継承(sti)とポリモーフィック関連を未だにぱっと思い出せないのでまとめ。 - 記すに足らず。](http://shirusu-ni-tarazu.hatenablog.jp/entry/2012/11/04/173742)

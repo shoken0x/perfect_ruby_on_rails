@@ -15,7 +15,7 @@ irb環境で、対話形式でrails consoleをより便利に
 
 *導入手順*
 *Gemfile*
-	
+
 	gem 'pry-rails', group: [:development, :test]
 
 
@@ -45,7 +45,7 @@ Hirbでコンソール上のモデルの出力を整形
 
 *導入手順*
 *Gemfile*
-	
+
 	gem 'hirb', group: [:development, :test]
 	gem 'hirb-unicode', group: [:development, :test]
 
@@ -95,7 +95,7 @@ pry上でもHirbを利用できる
 
 *導入手順*
 *Gemfile*
-	
+
 	gem 'better_errors', group: [:development, :test]
 	gem 'binding_of_caller', group: [:development, :test]
 
@@ -123,7 +123,7 @@ pry上でもHirbを利用できる
 	brew install graphviz
 
 *Gemfile*
-	
+
 	gem 'rails-erd', group: [:development, :test]
 
 コマンド `rake erd` をすると、app/ にpdfファイルが出力される
@@ -136,5 +136,3 @@ pry上でもHirbを利用できる
 
 参考  
 [http://qiita.com/kanpou_/items/74eca1846101e6db3387](http://qiita.com/kanpou_/items/74eca1846101e6db3387)
-	
-
