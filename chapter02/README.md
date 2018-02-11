@@ -6,7 +6,7 @@
 
 - MVCの基本
 - Model層: ActiveRecordの基本的な操作、バリデーション、コールバック
-- Controller層: ModelとViewをつなぐこと、リクエストオブジェクトやアクションコールバック、脆弱生への対処
+- Controller層: ModelとViewをつなぐこと、リクエストオブジェクトやアクションコールバック、脆弱性への対処
 - View層: 受け取ったModelを表示すること、テンプレートエンジン、ヘルパー、さまざまなフォーマットで表示
 - Skinny Controller, Fat Model?
 
@@ -108,7 +108,7 @@ end
 ```ruby
 class Book < ActiveRecord::Base
   enum status: %w(reservation now_on_sale end_of_print)
-  
+
 end
 ```
 
@@ -174,7 +174,7 @@ resources :publishers do
   member do
     get 'detail'
   end
-  
+
   collection do
     get 'search'
   end
@@ -282,7 +282,7 @@ respond_toでコンテンツタイプを出し分ける。
 テンプレートファイル内で、
 
 ```
-<%= render 'form' # またはrender partial: 'form'%> 
+<%= render 'form' # またはrender partial: 'form'%>
 ```
 
 と記述すると、`_form.html.erb`を表示する。

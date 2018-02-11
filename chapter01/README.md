@@ -32,7 +32,7 @@ gem uninstall {gemパッケージ名}
 オプション
 
 ```
---no-ri --no-rdoc  #riとrdocをインストールしない
+-N #ドキュメントをインストールしない (--no-documentでも可)
 ```
 
 rake: Rakeと呼ばれるビルドツールを実行するためのコマンド
@@ -113,7 +113,7 @@ Railsの4つの思想
 ## 1-3 Railsをはじめよう!!
 
 ```
-gem install rails -v 4.1.1 --no-ri --no-rdoc
+gem install rails -v 4.1.1 -N
 ```
 
 ### プロジェクトのひな形を作成する
