@@ -65,7 +65,7 @@ GEM
     erubis (2.7.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.10)
+    ffi (1.11.3)
     ffi-yajl (1.4.0)
       ffi (~> 1.5)
       libyajl2 (~> 1.2)
