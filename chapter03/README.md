@@ -1,6 +1,6 @@
 # 3章 アセット
 
-担当: @syokenz
+担当: @shoken0x
 
 ## Summary
 

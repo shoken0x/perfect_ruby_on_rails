@@ -1,6 +1,6 @@
 # 2章 Ruby on RailsとMVC
 
-担当: @syokenz
+担当: @shoken0x
 
 ## Summary
 

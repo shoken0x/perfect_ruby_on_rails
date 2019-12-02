@@ -1,6 +1,6 @@
 # 6章 Railsアプリケーションの開発
 
-担当: @syokenz
+担当: @shoken0x
 
 ## Summary
 

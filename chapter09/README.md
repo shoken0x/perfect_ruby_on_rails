@@ -1,6 +1,6 @@
 # 9章 Railsのインフラと運用
 
-1,2,3担当: @syokenz  
+1,2,3担当: @shoken0x  
 4,5,6担当: @hiroki-tkg
 
 

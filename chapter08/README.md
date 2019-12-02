@@ -1,6 +1,6 @@
 # 8章 Railsのインフラと運用
 
-担当: @syokenz
+担当: @shoken0x
 
 ## Summary
 
